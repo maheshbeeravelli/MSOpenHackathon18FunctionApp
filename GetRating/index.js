@@ -1,5 +1,5 @@
 module.exports = async function (context, req) {
-    var documents = context.bindings.ratingsAllIn;
+    var documents = context.bindings.ratingsIn;
     var totalDocuments = documents.length;
     context.log('Found '+ totalDocuments +' documents');
 

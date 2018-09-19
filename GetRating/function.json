@@ -1,0 +1,29 @@
+{
+  "disabled": false,
+  "bindings": [
+    {
+      "authLevel": "function",
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "req",
+      "methods": [
+        "get",
+        "post"
+      ]
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "res"
+    },
+    {
+      "type": "cosmosDB",
+      "name": "ratingsIn",
+      "databaseName": "BFYOC",
+      "collectionName": "Ratings",
+      "sqlQuery": "SELECT * from c where c.id = {id}",
+      "connectionStringSetting": "CosmosDBConnection",
+      "direction": "in"
+    }
+  ]
+}
